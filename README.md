@@ -2,13 +2,13 @@
 
 This very basic application contains 3 modules under ticket-service:
 
-# Maven Modules:
-* java-azure-common: has common code (utils, enums, dtos etc.)
-* java-azure-main: has services, rest controllers and other main code
-
 # Prerequisites:
 * Java 8
 * maven
+
+# Maven Modules:
+* java-azure-common: has common code (utils, enums, dtos etc.)
+* java-azure-main: has services, rest controllers and other main code
 
 # Unit Testing:
 *junit, and mockito to write unit tests and mock out dependencies.
@@ -32,7 +32,10 @@ This very basic application contains 3 modules under ticket-service:
    This starts up the application on port "8080" by default (I have tested using 8080).
 
    If you don't have port 8080 available, then run using 
-   mvn spring-boot:run -Dserver.port=<port_num>
+   ```mvn spring-boot:run -Dserver.port=<port_num>```
    (or)
    you could also update "server.port" property under src/main/resources/ticketservice-config.properties
+
+# Enable Eclipse Remote Debugging:
+ cd into java-azure-main project, and run: ```mvn spring-boot:run -Drun.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000```, and In eclipse, setup a debug configuration running on port ```8000```
 
