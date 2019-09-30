@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ApplicationInsights xmlns="http://schemas.microsoft.com/ApplicationInsights/2013/Settings" schemaVersion="2014-05-30">
+
+
+      <!-- The key from the portal: -->
+      <InstrumentationKey>d9ad457c-5139-4b65-97e4-d2f5b97e1364</InstrumentationKey>
+
+
+      <!-- HTTP request component (not required for bare API) -->
+      <TelemetryModules>
+        <Add type="com.microsoft.applicationinsights.web.extensibility.modules.WebRequestTrackingTelemetryModule">
+        	<Param name = "W3CEnabled" value ="true"/>
+		    <Param name ="enableW3CBackCompat" value = "true" />
+        </Add>
+        <Add type="com.microsoft.applicationinsights.web.extensibility.modules.WebSessionTrackingTelemetryModule"/>
+        <Add type="com.microsoft.applicationinsights.web.extensibility.modules.WebUserTrackingTelemetryModule"/>
+        
+   <!--      
+   Microsoft.ApplicationInsights.WindowsServer.DeveloperModeWithDebuggerAttachedTelemetryModule 
+   azure.application-insights.channel.in-process.developer-mode
+   -->
+        
+      </TelemetryModules>
+
+      <!-- Events correlation (not required for bare API) -->
+      <!-- These initializers add context data to each event -->
+
+      <TelemetryInitializers>
+        <Add type="com.microsoft.applicationinsights.web.extensibility.initializers.WebOperationIdTelemetryInitializer"/>
+        <Add type="com.microsoft.applicationinsights.web.extensibility.initializers.WebOperationNameTelemetryInitializer"/>
+        <Add type="com.microsoft.applicationinsights.web.extensibility.initializers.WebSessionTelemetryInitializer"/>
+        <Add type="com.microsoft.applicationinsights.web.extensibility.initializers.WebUserTelemetryInitializer"/>
+        <Add type="com.microsoft.applicationinsights.web.extensibility.initializers.WebUserAgentTelemetryInitializer"/>
+
+      </TelemetryInitializers>
+    </ApplicationInsights>
