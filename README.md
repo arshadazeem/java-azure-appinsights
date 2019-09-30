@@ -34,7 +34,7 @@ This very basic application contains 3 modules under ticket-service:
    If you don't have port 8080 available, then run using 
    ```mvn spring-boot:run -Dserver.port=<port_num>```
    (or)
-   you could also update "server.port" property under src/main/resources/ticketservice-config.properties
+   you could also update "server.port" property under src/main/resources/app-config.properties
 
 # Enable Eclipse Remote Debugging:
  cd into java-azure-main project, and run: ```mvn spring-boot:run -Drun.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000```, and In eclipse, setup a debug configuration running on port ```8000```
