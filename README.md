@@ -1,13 +1,10 @@
-# java-azure-appinsights
-java on azure with Application Insights
-
 # Simple Spring boot application configured to run with Azure Application Insights
 
 This very basic application contains 3 modules under ticket-service:
 
-* ticket-service-common: has common code (utils, enums, dtos etc.)
-* ticket-service-main: has services, rest controllers and other main code
-* ticket-service-integration-tests: REST service integration tests using Spring's Rest Template as the Rest client.
+# Maven Modules:
+* java-azure-common: has common code (utils, enums, dtos etc.)
+* java-azure-main: has services, rest controllers and other main code
 
 # Prerequisites:
 * Java 8
