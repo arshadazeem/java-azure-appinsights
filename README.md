@@ -24,8 +24,8 @@ This very basic application contains 3 modules under ticket-service:
 
 # Running the application:
 
-1. Checkout/download the project from git
-2. cd into the java-azure-appinsights directory
+1. Clone/download the project from git
+2. cd into the ```java-azure-appinsights``` directory
 3. To build and run unit tests: ```mvn clean install```
 4. cd into java-azure-main project
 5. Start the application using: ```mvn spring-boot:run```
